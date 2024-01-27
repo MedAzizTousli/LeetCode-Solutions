@@ -1,0 +1,15 @@
+class Solution(object):
+    def cal(self, s):
+        res = 0
+        for i in s:
+            res += int(i)
+        return str(res)
+        
+    def digitSum(self, s, k):
+        while len(s) > k:
+            new = ""
+            for i in range(len(s)/k+1):
+                sub = s[i*k:(i+1)*k]
+                new += self.cal(sub)
+            s = new
+        return s
