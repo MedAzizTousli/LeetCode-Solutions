@@ -1,0 +1,31 @@
+class Solution(object):
+    def findDiagonalOrder(self, mat):
+        n = len(mat)
+        m = len(mat[0])
+        nb = n+m-1
+        l = [mat[0][0]]
+        down = True
+        i = 0
+        j = 0
+        for it in range(nb):
+            if down == True:
+                i = 0
+                j += 1
+            else:
+                j = 0
+                i += 1
+            x = i+j
+            if down == True:
+                while i < x + 1:
+                    l.append(mat[i][j])
+                    i += 1
+                    j -= 1
+            else:
+                while j < x + 1:
+                    print(i, j)
+                    l.append(mat[i][j])
+                    j += 1
+                    i -= 1
+            down = not(down)
+            print(down)
+        return l
