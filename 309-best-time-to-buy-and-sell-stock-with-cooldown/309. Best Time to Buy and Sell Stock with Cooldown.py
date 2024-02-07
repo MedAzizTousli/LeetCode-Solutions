@@ -10,6 +10,4 @@ class Solution:
                     dp[i][j] = dp[i-1][j]
                 else:
                     dp[i][j] = max(dp[i-1][j], dp[i][j-1], prices[j]-prices[i] + dp[i][i-2])
-            #     for j in range(0,i+1):
-            # for j in range(i+1,n):
         return dp[-1][-1]
