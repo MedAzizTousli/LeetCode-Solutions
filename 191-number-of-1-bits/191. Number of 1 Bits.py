@@ -4,9 +4,7 @@ class Solution:
         nb = 0
         for i in range(33):
             nb = 2 ** i
-            # print(i, nb)
             temp = n & nb
             if temp != 0:
                 res += 1
-        # print(str(n))
         return res
