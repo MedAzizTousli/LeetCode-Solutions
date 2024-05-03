@@ -8,8 +8,6 @@ class Solution:
                 if matrix[i][j] == 0:
                     rows.add(i)
                     cols.add(j)
-        print(rows)
-        print(cols)
         for i in range(R):
             for j in range(C):
                 if i in rows or j in cols:
