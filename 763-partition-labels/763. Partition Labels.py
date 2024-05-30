@@ -1,7 +1,6 @@
 class Solution:
     def partitionLabels(self, s: str) -> List[int]:
         mp = defaultdict(chr, Counter(s))
-        print(mp)
         st = set()
         curr = 0
         res = []
